@@ -1,0 +1,34 @@
+    inputs.addEventListener('input', () => {
+         if(inputs.value < 90 && inputs.value > 0){
+            grau.innerText = `Grau do primeiro = ${inputs.value}`
+            grau2.innerText = `Grau do segundo = ${180 - inputs.value}`
+            grau3.innerText = `Grau do terceiro = ${180 + parseFloat(inputs.value)}`
+            grau4.innerText = `Grau do quarto = ${360 - inputs.value}`
+        } 
+
+
+
+
+
+                if(inputs[0].value == 0 && inputs[2].value == 0 && inputs[3].value == 0 ) {
+            grau.innerText = `Grau do primeiro = ${180 - inputs[1].value}`
+            grau2.innerText = `Grau do segundo = ${inputs [1].value}`
+            grau3.innerText = `Grau do terceiro = ${360 - inputs[1].value}`
+            grau4.innerText = `Grau do quatro = ${180 + parseFloat(inputs[1].value)}`
+        } else if(inputs[1].value == 0 && inputs[2].value == 0 && inputs [3].value == 0){
+            grau.innerText = `Grau do primeiro = ${inputs[0].value}`
+            grau2.innerText = `Grau do segundo = ${180 - inputs[0].value}`
+            grau3.innerText = `Grau do terceiro = ${180 + parseFloat(inputs[0].value)}`
+            grau4.innerText = `Grau do quarto = ${360 - inputs[0].value}`
+        } else if (inputs[0].value == 0 && inputs[1].value == 0 && inputs[3].value == 0){
+            grau.innerText = `Grau do primeiro = ${inputs[2].value - 180}`
+            grau2.innerText = `Grau do segundo = ${360 - inputs[2].value}`
+            grau3.innerText = `Grau do terceiro = ${inputs[2].value}`
+            grau4.innerText = `Grau do quatro = ${ 360 - (180 - (360 - inputs[2].value)) }`
+        } else if (inputs[0].value == 0 && inputs[1].value == 0 && inputs[2].value == 0){
+            grau.innerText = `Grau do primeiro = ${360 - inputs[3].value} `
+            grau2.innerText = `Grau do segundo = ${inputs[3].value - 180}`
+            grau3.innerText = `Grau do terceiro = ${180 + (360 - parseFloat(inputs[3].value))}`
+            grau4.innerText = `Grau do Quarto = ${inputs[3].value}`
+        }
+    })
